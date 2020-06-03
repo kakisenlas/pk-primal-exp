@@ -117,26 +117,28 @@ document.addEventListener('DOMContentLoaded', () => {
   `;
 
   // Root Element
-  const root = document.querySelector('#template');
+  const root = document.querySelector('#pk-primal-template');
 
   // ===================================================== DATA
 
   // Data
   const data = {
     template: {
-      '{{firstname}}': root.getAttribute('d-firstname'),
-      '{{lastname}}': root.getAttribute('d-lastname'),
-      '{{avatar}}': root.getAttribute('d-avatar'),
-      '{{background}}': root.getAttribute('d-background')
+      '{{firstname}}': root.getAttribute('d-firstname') || 'Nombre',
+      '{{lastname}}': root.getAttribute('d-lastname') || 'Apellido',
+      '{{avatar}}':
+        root.getAttribute('d-avatar') || 'https://placehold.it/190x190',
+      '{{background}}':
+        root.getAttribute('d-background') || 'https://placehold.it/350x650'
     },
     main: {
-      '{{age}}': root.getAttribute('d-age'),
-      '{{sex}}': root.getAttribute('d-sex'),
-      '{{origin}}': root.getAttribute('d-origin'),
-      '{{class}}': root.getAttribute('d-class'),
-      '{{faction}}': root.getAttribute('d-faction'),
-      '{{starter}}': root.getAttribute('d-starter'),
-      '{{pac}}': root.getAttribute('d-pack')
+      '{{age}}': root.getAttribute('d-age') || '---',
+      '{{sex}}': root.getAttribute('d-sex') || '---',
+      '{{origin}}': root.getAttribute('d-origin') || '---',
+      '{{class}}': root.getAttribute('d-class') || '---',
+      '{{faction}}': root.getAttribute('d-faction') || '---',
+      '{{starter}}': root.getAttribute('d-starter') || '---',
+      '{{pack}}': root.getAttribute('d-pack') || '---'
     }
   };
 
@@ -152,11 +154,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // Main fields
   let mainFields = `
   <ul>
-    <li>{{age}}</li>
-    <li>{{sex}}</li>
-    <li>{{origin}}</li>
-    <li>{{class}}</li>
-    <li>{{faction}}</li>
+    <li><strong>Edad:</strong> {{age}}</li>
+    <li><strong>Sexo:</strong> {{sex}}</li>
+    <li><strong>Origen:</strong> {{origin}}</li>
+    <li><strong>Clase Social:</strong> {{class}}</li>
+    <li><strong>Facción:</strong> {{faction}}</li>
+    <li><strong>Pokémon Inicial:</strong> {{starter}}</li>
+    <li><strong>Pack:</strong> {{pack}}</li>
   </ul>
   `;
 
@@ -174,6 +178,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // Main fields
   Object.keys(data.main).forEach((k) => {
     mainFields = mainFields.replace(k, data.main[k]);
+  });
+
+  Object.keys(descriptions).forEach((k) => {
+    if (descriptions[k] === null) {
+      return (descriptions[k] = '---');
+    }
+
+    return (descriptions[k] = descriptions[k].replace(
+      /(?:\r\n|\r|\n)/g,
+      '<br/>'
+    ));
   });
 
   descriptions.desc1 = mainFields + descriptions.desc1;
@@ -214,14 +229,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Title replacer
   const titleReplacer = (replacement) => {
-    const title = titles[replacement];
+    const title = titles[replacement] || 'Título';
     const titleDiv = document.querySelector('#title');
     titleDiv.innerHTML = title;
   };
 
   // Description replacer
   const descriptionReplacer = (replacement) => {
-    const description = descriptions[replacement];
+    const description = descriptions[replacement] || 'Descripción';
     const descriptionDiv = document.querySelector('#description');
     descriptionDiv.innerHTML = description;
   };

@@ -1,7 +1,7 @@
 /* 
 
-font-family: 'Open Sans', sans-serif;
-font-family: 'Playfair Display', serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Oswald', sans-serif;
 
 $gainsboro: rgba(207, 219, 213, 1);
 $ivory: rgba(232, 237, 223, 1);
@@ -11,7 +11,7 @@ $jet: rgba(51, 53, 51, 1);
 
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&family=Playfair+Display:ital,wght@0,400;0,900;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto&display=swap');
 
 body {
   background: #141414;
@@ -45,7 +45,7 @@ body {
 
 .container > .name {
   color: rgba(255, 255, 255, 1);
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 10px;
   position: absolute;
   bottom: 50px;
@@ -123,7 +123,7 @@ body {
   background: transparent;
   color: rgba(255, 255, 255, 1);
   width: 105px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   left: -115px;
   text-align: center;
   padding: 4.5px 0;
@@ -230,13 +230,13 @@ body {
 /* TITLE */
 
 .container > .content > .title {
-  font-family: 'Playfair Display', serif;
-  font-weight: 900;
+  font-family: 'Oswald', sans-serif;
   font-size: 30px;
   color: rgba(25, 25, 25, 1);
   position: absolute;
   top: 90px;
   left: 25px;
+  letter-spacing: 3px;
 }
 
 /* DESCRIPTION */
@@ -248,8 +248,8 @@ body {
   top: 130px;
   padding: 0 15px 0 25px;
   overflow: auto;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 11px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
   text-align: justify;
   line-height: 20px;
   margin-right: 5px;
