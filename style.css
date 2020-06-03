@@ -1,18 +1,3 @@
-/* 
-
-font-family: 'Roboto', sans-serif;
-font-family: 'Oswald', sans-serif;
-
-$gainsboro: rgba(207, 219, 213, 1);
-$ivory: rgba(232, 237, 223, 1);
-$maize-crayola: rgba(227, 185, 79, 1);
-$raisin-black: rgba(36, 36, 35, 1);
-$jet: rgba(51, 53, 51, 1);
-
-*/
-
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto&display=swap');
-
 body {
   background: #141414;
   margin: 0;
@@ -27,9 +12,11 @@ body {
   margin: 90px auto 0;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto&display=swap');
+
 /* CONTAINER */
 
-.container {
+.cexp {
   margin: 0 auto;
   width: 350px;
   height: 650px;
@@ -43,7 +30,7 @@ body {
 
 /* NAME */
 
-.container > .name {
+.cexp > .name {
   color: rgba(255, 255, 255, 1);
   font-family: 'Roboto', sans-serif;
   font-size: 10px;
@@ -57,7 +44,7 @@ body {
 
 /* LINE */
 
-.container > .line {
+.cexp > .line {
   width: 230px;
   height: 1px;
   background: rgba(255, 255, 255, 1);
@@ -66,7 +53,7 @@ body {
   left: 24px;
 }
 
-.container > .line::after {
+.cexp > .line::after {
   content: '';
   width: 75px;
   height: 3px;
@@ -78,7 +65,7 @@ body {
 
 /* MENU */
 
-.container > .menu {
+.cexp > .menu {
   width: 25px;
   height: 160px;
   display: grid;
@@ -92,14 +79,14 @@ body {
   transition: all ease-in-out 0.45s;
 }
 
-.container > .menu.active {
+.cexp > .menu.active {
   bottom: 85px;
   opacity: 1;
 }
 
 /* BUTTONS */
 
-.container > .menu > .btn {
+.cexp > .menu > .btn {
   background: rgba(255, 255, 255, 1);
   color: rgba(25, 25, 25, 1);
   display: flex;
@@ -113,12 +100,12 @@ body {
   position: relative;
 }
 
-.container > .menu > .btn:hover {
+.cexp > .menu > .btn:hover {
   background: transparent;
   color: rgba(255, 255, 255, 1);
 }
 
-.container > .menu > .btn > .title {
+.cexp > .menu > .btn > .title {
   position: absolute;
   background: transparent;
   color: rgba(255, 255, 255, 1);
@@ -134,14 +121,14 @@ body {
   transition: all ease-in-out 0.5s;
 }
 
-.container > .menu > .btn:hover > .title {
+.cexp > .menu > .btn:hover > .title {
   opacity: 1;
   visibility: visible;
 }
 
 /* OPEN BUTTON */
 
-.container > .open {
+.cexp > .open {
   width: 48px;
   height: 48px;
   background: rgba(255, 255, 255, 1);
@@ -158,13 +145,13 @@ body {
   cursor: pointer;
 }
 
-.container > .open:hover {
+.cexp > .open:hover {
   background: transparent;
   color: rgba(255, 255, 255, 1);
   transform: rotate(-90deg);
 }
 
-.container > .open.active {
+.cexp > .open.active {
   transform: rotate(-90deg);
   background: transparent;
   color: rgba(255, 255, 255, 1);
@@ -172,7 +159,7 @@ body {
 
 /* CONTENT */
 
-.container > .content {
+.cexp > .cnt {
   width: 350px;
   height: 500px;
   background: rgba(255, 255, 255, 1);
@@ -183,14 +170,14 @@ body {
   transition: all ease-in-out 0.5s;
 }
 
-.container > .content.active {
+.cexp > .cnt.active {
   top: 150px;
   opacity: 1;
 }
 
 /* AVATAR */
 
-.container > .content > .avatar {
+.cexp > .cnt > .avatar {
   width: 150px;
   height: 150px;
   background-size: cover !important;
@@ -206,7 +193,7 @@ body {
   box-shadow: inset 0 0 0 395px rgba(25, 25, 25, 0.65);
 }
 
-.container > .content > .avatar > .close {
+.cexp > .cnt > .avatar > .close {
   background: rgba(255, 255, 255, 1);
   padding: 15px;
   border-radius: 50%;
@@ -216,11 +203,11 @@ body {
   transition: all ease-in-out 0.25s;
 }
 
-.container > .content.active > .avatar > .close {
+.cexp > .cnt.active > .avatar > .close {
   transform: rotate(0deg);
 }
 
-.container > .content.active > .avatar > .close:hover {
+.cexp > .cnt.active > .avatar > .close:hover {
   background: transparent;
   color: rgba(255, 255, 255, 1);
   border: 1px solid rgba(255, 255, 255, 1);
@@ -229,7 +216,7 @@ body {
 
 /* TITLE */
 
-.container > .content > .title {
+.cexp > .cnt > .title {
   font-family: 'Oswald', sans-serif;
   font-size: 30px;
   color: rgba(25, 25, 25, 1);
@@ -237,11 +224,12 @@ body {
   top: 90px;
   left: 25px;
   letter-spacing: 3px;
+  font-weight: 700;
 }
 
 /* DESCRIPTION */
 
-.container > .content > .description {
+.cexp > .cnt > .description {
   width: 290px;
   height: 310px;
   position: relative;
@@ -256,21 +244,21 @@ body {
   color: rgba(25, 25, 25, 1);
 }
 
-.container > .content > .description::-webkit-scrollbar {
+.cexp > .cnt > .description::-webkit-scrollbar {
   width: 5px;
 }
 
-.container > .content > .description::-webkit-scrollbar-thumb {
+.cexp > .cnt > .description::-webkit-scrollbar-thumb {
   background: rgba(25, 25, 25, 1);
 }
 
-.container > .content > .description::-webkit-scrollbar-track {
+.cexp > .cnt > .description::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 1);
 }
 
 /* NEXT */
 
-.container > .content > .next {
+.cexp > .cnt > .next {
   width: 25px;
   height: 25px;
   cursor: pointer;
@@ -299,7 +287,7 @@ body {
 
 /* PREV */
 
-.container > .content > .prev {
+.cexp > .cnt > .prev {
   width: 25px;
   height: 25px;
   cursor: pointer;
@@ -325,8 +313,3 @@ body {
     left: 30px;
   }
 }
-
-/* .container > .content > .prev:hover,
-.container > .content > .next:hover {
-  animation-play-state: paused;
-} */

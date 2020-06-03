@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let template = `
   <div
-    class="container"
+    class="cexp"
     style="
       background: linear-gradient(
           to bottom,
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
 
     <!-- CONTENT -->
-    <div class="content" id="content">
+    <div class="cnt" id="cnt">
       <!-- AVATAR -->
       <div
         class="avatar"
@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const prevBtn = document.querySelector('#prev-btn');
   const nextBtn = document.querySelector('#next-btn');
   const closeBtn = document.querySelector('#close-btn');
-  const contentDiv = document.querySelector('#content');
+  const contentDiv = document.querySelector('#cnt');
 
   // Display the menu
   openBtn.addEventListener('click', () => {
