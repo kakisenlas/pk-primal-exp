@@ -1,0 +1,332 @@
+/* 
+
+font-family: 'Open Sans', sans-serif;
+font-family: 'Playfair Display', serif;
+
+$gainsboro: rgba(207, 219, 213, 1);
+$ivory: rgba(232, 237, 223, 1);
+$maize-crayola: rgba(227, 185, 79, 1);
+$raisin-black: rgba(36, 36, 35, 1);
+$jet: rgba(51, 53, 51, 1);
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&family=Playfair+Display:ital,wght@0,400;0,900;1,900&display=swap');
+
+body {
+  background: #141414;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.postbody {
+  width: 796.88px;
+  margin: 90px auto 0;
+}
+
+/* CONTAINER */
+
+.container {
+  margin: 0 auto;
+  width: 350px;
+  height: 650px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover !important;
+  background-position: center !important;
+  border-radius: 25px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+/* NAME */
+
+.container > .name {
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  position: absolute;
+  bottom: 50px;
+  left: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+/* LINE */
+
+.container > .line {
+  width: 230px;
+  height: 1px;
+  background: rgba(255, 255, 255, 1);
+  position: absolute;
+  bottom: 46px;
+  left: 24px;
+}
+
+.container > .line::after {
+  content: '';
+  width: 75px;
+  height: 3px;
+  background: rgba(255, 255, 255, 1);
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+}
+
+/* MENU */
+
+.container > .menu {
+  width: 25px;
+  height: 160px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 8.75px;
+  position: absolute;
+  right: 37px;
+  bottom: -150px;
+  opacity: 0;
+  transition: all ease-in-out 0.45s;
+}
+
+.container > .menu.active {
+  bottom: 85px;
+  opacity: 1;
+}
+
+/* BUTTONS */
+
+.container > .menu > .btn {
+  background: rgba(255, 255, 255, 1);
+  color: rgba(25, 25, 25, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 10px;
+  border: 1px solid rgba(255, 255, 255, 1);
+  cursor: pointer;
+  transition: all ease-in-out 0.25s;
+  position: relative;
+}
+
+.container > .menu > .btn:hover {
+  background: transparent;
+  color: rgba(255, 255, 255, 1);
+}
+
+.container > .menu > .btn > .title {
+  position: absolute;
+  background: transparent;
+  color: rgba(255, 255, 255, 1);
+  width: 105px;
+  font-family: 'Open Sans', sans-serif;
+  left: -115px;
+  text-align: center;
+  padding: 4.5px 0;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 1);
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease-in-out 0.5s;
+}
+
+.container > .menu > .btn:hover > .title {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* OPEN BUTTON */
+
+.container > .open {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: rgba(25, 25, 25, 1);
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  transition: all ease-in-out 0.25s;
+  border: 1px solid rgba(255, 255, 255, 1);
+  cursor: pointer;
+}
+
+.container > .open:hover {
+  background: transparent;
+  color: rgba(255, 255, 255, 1);
+  transform: rotate(-90deg);
+}
+
+.container > .open.active {
+  transform: rotate(-90deg);
+  background: transparent;
+  color: rgba(255, 255, 255, 1);
+}
+
+/* CONTENT */
+
+.container > .content {
+  width: 350px;
+  height: 500px;
+  background: rgba(255, 255, 255, 1);
+  position: relative;
+  top: 750px;
+  z-index: 300;
+  opacity: 0;
+  transition: all ease-in-out 0.5s;
+}
+
+.container > .content.active {
+  top: 150px;
+  opacity: 1;
+}
+
+/* AVATAR */
+
+.container > .content > .avatar {
+  width: 150px;
+  height: 150px;
+  background-size: cover !important;
+  background-position: center !important;
+  position: absolute;
+  left: 80px;
+  top: -90px;
+  border-radius: 50%;
+  border: 20px solid rgba(255, 255, 255, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 0 395px rgba(25, 25, 25, 0.65);
+}
+
+.container > .content > .avatar > .close {
+  background: rgba(255, 255, 255, 1);
+  padding: 15px;
+  border-radius: 50%;
+  color: rgba(25, 25, 25, 1);
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 1);
+  transition: all ease-in-out 0.25s;
+}
+
+.container > .content.active > .avatar > .close {
+  transform: rotate(0deg);
+}
+
+.container > .content.active > .avatar > .close:hover {
+  background: transparent;
+  color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(255, 255, 255, 1);
+  transform: rotate(90deg);
+}
+
+/* TITLE */
+
+.container > .content > .title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 30px;
+  color: rgba(25, 25, 25, 1);
+  position: absolute;
+  top: 90px;
+  left: 25px;
+}
+
+/* DESCRIPTION */
+
+.container > .content > .description {
+  width: 290px;
+  height: 310px;
+  position: relative;
+  top: 130px;
+  padding: 0 15px 0 25px;
+  overflow: auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 11px;
+  text-align: justify;
+  line-height: 20px;
+  margin-right: 5px;
+  color: rgba(25, 25, 25, 1);
+}
+
+.container > .content > .description::-webkit-scrollbar {
+  width: 5px;
+}
+
+.container > .content > .description::-webkit-scrollbar-thumb {
+  background: rgba(25, 25, 25, 1);
+}
+
+.container > .content > .description::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 1);
+}
+
+/* NEXT */
+
+.container > .content > .next {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 400;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 25px;
+  right: 25px;
+  animation: next 1.5s infinite;
+  transition: all ease-in-out 0.25s;
+}
+
+@keyframes next {
+  0% {
+    right: 30px;
+  }
+  50% {
+    right: 15px;
+  }
+  100% {
+    right: 30px;
+  }
+}
+
+/* PREV */
+
+.container > .content > .prev {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 400;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 25px;
+  left: 25px;
+  animation: prev 1.5s infinite;
+  transition: all ease-in-out 0.25s;
+}
+
+@keyframes prev {
+  0% {
+    left: 30px;
+  }
+  50% {
+    left: 15px;
+  }
+  100% {
+    left: 30px;
+  }
+}
+
+/* .container > .content > .prev:hover,
+.container > .content > .next:hover {
+  animation-play-state: paused;
+} */
