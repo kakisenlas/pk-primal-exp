@@ -31,7 +31,7 @@ body {
 /* NAME */
 
 .cexp > .name {
-  color: rgba(255, 255, 255, 1);
+  color: rgba(227, 185, 79, 1);
   font-family: 'Roboto', sans-serif;
   font-size: 10px;
   position: absolute;
@@ -47,7 +47,7 @@ body {
 .cexp > .line {
   width: 230px;
   height: 1px;
-  background: rgba(255, 255, 255, 1);
+  background: rgba(227, 185, 79, 1);
   position: absolute;
   bottom: 46px;
   left: 24px;
@@ -57,7 +57,7 @@ body {
   content: '';
   width: 75px;
   height: 3px;
-  background: rgba(255, 255, 255, 1);
+  background: rgba(227, 185, 79, 1);
   position: absolute;
   bottom: -1px;
   left: 0;
@@ -87,14 +87,14 @@ body {
 /* BUTTONS */
 
 .cexp > .menu > .btn {
-  background: rgba(255, 255, 255, 1);
+  background: rgba(227, 185, 79, 1);
   color: rgba(25, 25, 25, 1);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   font-size: 10px;
-  border: 1px solid rgba(255, 255, 255, 1);
+  border: 1px solid rgba(227, 185, 79, 1);
   cursor: pointer;
   transition: all ease-in-out 0.25s;
   position: relative;
@@ -102,20 +102,20 @@ body {
 
 .cexp > .menu > .btn:hover {
   background: transparent;
-  color: rgba(255, 255, 255, 1);
+  color: rgba(227, 185, 79, 1);
 }
 
 .cexp > .menu > .btn > .title {
   position: absolute;
   background: transparent;
-  color: rgba(255, 255, 255, 1);
+  color: rgba(227, 185, 79, 1);
   width: 105px;
   font-family: 'Roboto', sans-serif;
   left: -115px;
   text-align: center;
   padding: 4.5px 0;
   border-radius: 25px;
-  border: 1px solid rgba(255, 255, 255, 1);
+  border: 1px solid rgba(227, 185, 79, 1);
   opacity: 0;
   visibility: hidden;
   transition: all ease-in-out 0.5s;
@@ -131,7 +131,7 @@ body {
 .cexp > .open {
   width: 48px;
   height: 48px;
-  background: rgba(255, 255, 255, 1);
+  background: rgba(227, 185, 79, 1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -141,20 +141,20 @@ body {
   bottom: 24px;
   right: 24px;
   transition: all ease-in-out 0.25s;
-  border: 1px solid rgba(255, 255, 255, 1);
+  border: 1px solid rgba(227, 185, 79, 1);
   cursor: pointer;
 }
 
 .cexp > .open:hover {
   background: transparent;
-  color: rgba(255, 255, 255, 1);
+  color: rgba(227, 185, 79, 1);
   transform: rotate(-90deg);
 }
 
 .cexp > .open.active {
   transform: rotate(-90deg);
   background: transparent;
-  color: rgba(255, 255, 255, 1);
+  color: rgba(227, 185, 79, 1);
 }
 
 /* CONTENT */
@@ -162,7 +162,7 @@ body {
 .cexp > .cnt {
   width: 350px;
   height: 500px;
-  background: rgba(255, 255, 255, 1);
+  background: rgba(25, 25, 25, 1);
   position: relative;
   top: 750px;
   z-index: 300;
@@ -186,7 +186,7 @@ body {
   left: 80px;
   top: -90px;
   border-radius: 50%;
-  border: 20px solid rgba(255, 255, 255, 1);
+  border: 20px solid rgba(25, 25, 25, 1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -194,12 +194,12 @@ body {
 }
 
 .cexp > .cnt > .avatar > .close {
-  background: rgba(255, 255, 255, 1);
+  background: rgba(25, 25, 25, 1);
   padding: 15px;
   border-radius: 50%;
-  color: rgba(25, 25, 25, 1);
+  color: rgba(227, 185, 79, 1);
   cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 1);
+  border: 1px solid rgba(25, 25, 25, 1);
   transition: all ease-in-out 0.25s;
 }
 
@@ -209,8 +209,8 @@ body {
 
 .cexp > .cnt.active > .avatar > .close:hover {
   background: transparent;
-  color: rgba(255, 255, 255, 1);
-  border: 1px solid rgba(255, 255, 255, 1);
+  color: rgba(2227, 185, 79, 1);
+  border: 1px solid rgba(227, 185, 79, 1);
   transform: rotate(90deg);
 }
 
@@ -219,7 +219,7 @@ body {
 .cexp > .cnt > .title {
   font-family: 'Oswald', sans-serif;
   font-size: 30px;
-  color: rgba(25, 25, 25, 1);
+  color: rgba(227, 185, 79, 1);
   position: absolute;
   top: 90px;
   left: 25px;
@@ -241,7 +241,7 @@ body {
   text-align: justify;
   line-height: 20px;
   margin-right: 5px;
-  color: rgba(25, 25, 25, 1);
+  color: rgba(227, 185, 79, 1);
 }
 
 .cexp > .cnt > .description::-webkit-scrollbar {
@@ -249,11 +249,11 @@ body {
 }
 
 .cexp > .cnt > .description::-webkit-scrollbar-thumb {
-  background: rgba(25, 25, 25, 1);
+  background: rgba(227, 185, 79, 1);
 }
 
 .cexp > .cnt > .description::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 1);
+  background: rgba(25, 25, 25, 1);
 }
 
 /* NEXT */
@@ -269,6 +269,7 @@ body {
   justify-content: center;
   bottom: 25px;
   right: 25px;
+  color: rgba(227, 185, 79, 1);
   animation: next 1.5s infinite;
   transition: all ease-in-out 0.25s;
 }
@@ -298,6 +299,7 @@ body {
   justify-content: center;
   bottom: 25px;
   left: 25px;
+  color: rgba(227, 185, 79, 1);
   animation: prev 1.5s infinite;
   transition: all ease-in-out 0.25s;
 }
